@@ -48,7 +48,7 @@
         <a class="btn btn-dark mt-3 mb-3" style="text-align: center; width: 100%"
            data-toggle="collapse" href="#collapseExample" role="button"
            aria-expanded="true" aria-controls="collapseExample">
-            Добавить новый товар
+            Добавить новую запись
         </a>
         <div class="collapse mb-3" id="collapseExample" style="">
             <form action="/product/createEvent/" method="post" enctype="multipart/form-data">

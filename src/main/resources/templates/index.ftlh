@@ -20,7 +20,7 @@
             <a href="/product/${product.id}" class="w-25 h-25 my-auto mx-auto">
                 <div class="card text-white bg-dark my-3">
                     <img src="/images/${product.previewImageId}"
-                         class="card-img-top" style="height: 200px;overflow: hidden">
+                         class="card-img-top" style="height: 200px">
                     <div class="card-body">
                         <h5 class="card-title">${product.title}</h5>
                         <p class="card-text">${product.price} ₽</p>

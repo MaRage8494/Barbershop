@@ -98,7 +98,9 @@
             </th>
         </tr>
     <#else>
-        <h3>Пользователей нет</h3>
+        <tr>
+            <td colspan="5"><h3 style="text-align: center">Услуг нет</h3></td>
+        </tr>
     </#list>
     </tbody>
 </table><br>
