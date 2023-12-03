@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 <#import "blocks/template.ftlh" as t>
 <#import "blocks/pager.ftlh" as p>
+=======
+<#import "blocks/template.ftlh" as t />
+>>>>>>> b76ca5c2c2a5e4dc1c29652c8207315fd166af00
 <@t.template user>
     <#if user.email??>
         <p class="text-info mx-auto" style="font-size: 20px; text-align: center">Добро пожаловать, <b>${user.name}!</b></p>
-        <hr>
+        <hr/>
     </#if>
-    <h1 style="text-align: center">Наши услуги</h1><hr>
+    <h1 style="text-align: center">Наши услуги</h1><hr/>
     <form method="get" action="/">
         <div class="form-row">
             <div class="form-group" style="width: 48%">
@@ -22,8 +26,8 @@
             <button style="width: 100%" type="submit" class="btn btn-dark">Поиск</button>
         </div>
     </form>
-    <div class="card-deck d-flex justify-content-between flex-row">
-        <#list products.content as product>
+    <div class="card-deck d-flex justify-content-between flex-row" id="products">
+        <#list products as product>
             <a href="/product/${product.id}" class="w-25 h-25 my-auto mx-auto">
                 <div class="card text-white bg-dark my-3">
                     <img src="/images/${product.previewImageId}"
