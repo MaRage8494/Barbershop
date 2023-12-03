@@ -1,10 +1,10 @@
-<#import "blocks/template.ftlh" as t>
+<#import "blocks/template.ftlh" as t />
 <@t.template user>
     <#if user.email??>
         <p class="text-info mx-auto" style="font-size: 20px; text-align: center">Добро пожаловать, <b>${user.name}!</b></p>
-        <hr>
+        <hr/>
     </#if>
-    <h1 style="text-align: center">Наши услуги</h1><hr>
+    <h1 style="text-align: center">Наши услуги</h1><hr/>
     <form method="get" action="/">
         <div class="form-row">
             <div class="form-group" style="width: 100%">
@@ -15,7 +15,7 @@
             <button style="width: 100%" type="submit" class="btn btn-dark">Поиск</button>
         </div>
     </form>
-    <div class="card-deck d-flex justify-content-between flex-row">
+    <div class="card-deck d-flex justify-content-between flex-row" id="products">
         <#list products as product>
             <a href="/product/${product.id}" class="w-25 h-25 my-auto mx-auto">
                 <div class="card text-white bg-dark my-3">

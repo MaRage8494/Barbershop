@@ -23,7 +23,7 @@ public class Product {
     private String price;
     @Column(name = "city")
     private String city;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER,
     mappedBy = "product")
     private List<Image> images = new ArrayList<>();
     private Long previewImageId;
