@@ -1,4 +1,5 @@
 <#import "blocks/template.ftlh" as t>
+<#import "blocks/pager.ftlh" as p>
 <@t.template user>
     <#if user.email??>
         <p class="text-info mx-auto" style="font-size: 20px; text-align: center">Добро пожаловать, <b>${user.name}!</b></p>
@@ -7,16 +8,22 @@
     <h1 style="text-align: center">Наши услуги</h1><hr>
     <form method="get" action="/">
         <div class="form-row">
-            <div class="form-group" style="width: 100%">
+            <div class="form-group" style="width: 48%">
                 <label for="searchWord">Поиск по услугам</label>
                 <input type="text" name="searchWord" <#if searchWord??>value="${searchWord}"</#if> class="form-control"
                        id="searchWord">
             </div>
+            <div class="form-group" style="width: 48%; margin-left: 30px">
+                <label for="searchWord">Поиск по городу</label>
+                <input type="text" name="searchTown" <#if searchTown??>value="${searchTown}"</#if> class="form-control"
+                       id="searchTown">
+            </div>
+            <input type="hidden" name="size" value=${products.getSize()}>
             <button style="width: 100%" type="submit" class="btn btn-dark">Поиск</button>
         </div>
     </form>
     <div class="card-deck d-flex justify-content-between flex-row">
-        <#list products as product>
+        <#list products.content as product>
             <a href="/product/${product.id}" class="w-25 h-25 my-auto mx-auto">
                 <div class="card text-white bg-dark my-3">
                     <img src="/images/${product.previewImageId}"
@@ -34,4 +41,5 @@
             <h1 style="text-align: center">Не найдено</h1>
         </#list>
     </div>
+    <@p.pager url products searchWord!"" searchTown!""/>
 </@t.template>

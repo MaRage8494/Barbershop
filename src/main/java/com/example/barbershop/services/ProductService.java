@@ -7,6 +7,8 @@ import com.example.barbershop.repositories.ProductRepository;
 import com.example.barbershop.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -21,9 +23,11 @@ public class ProductService {
     private final ProductRepository productRepository;
     private final UserRepository userRepository;
 
-    public List<Product> listProducts(String title) {
-        if (title != null) return productRepository.findByTitle(title);
-        return productRepository.findAll();
+    public Page<Product> listProducts(String title, String town, Pageable pageable) {
+        if ((title == "" && town == "")||(title == null && town == null)) return productRepository.findAll(pageable);
+        if (title != "" && town != "") return productRepository.findByTitleAndCity(title, town, pageable);
+        if (title == "" && town != "") return productRepository.findByCity(town, pageable);
+        return productRepository.findByTitle(title, pageable);
     }
 
     public void saveProduct(Principal principal, Product product, MultipartFile file) throws IOException {

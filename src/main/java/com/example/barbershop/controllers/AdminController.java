@@ -7,6 +7,7 @@ import com.example.barbershop.services.EventService;
 import com.example.barbershop.services.ProductService;
 import com.example.barbershop.services.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,10 +30,10 @@ public class AdminController {
     private final EventService eventService;
 
     @GetMapping("/admin")
-    public String admin(@RequestParam(name = "title", required = false) String title,Principal principal, Model model){
+    public String admin(@RequestParam(name = "title", required = false) String title, Principal principal, Model model, Pageable pageable){
         model.addAttribute("events", eventService.listEvents(title));
         model.addAttribute("users", userService.list());
-        model.addAttribute("products", productService.listProducts(title));
+        model.addAttribute("products", productService.listProducts(title, null, pageable));
         User user = userService.getUserByPrincipal(principal);
         model.addAttribute("user", user);
         return "admin";

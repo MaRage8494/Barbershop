@@ -1,0 +1,24 @@
+6927683 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool
+                – HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m53s446ms41µs800ns).
+33352350 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool
+                – HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h59m24s265ms987µs500ns).
+39002650 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool
+                – HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h34m10s318ms772µs200ns).
+44263021 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool
+                – HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=44m39s804ms311µs400ns).
+44964120 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool
+                – HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m40s963ms53µs600ns).
+46133209 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool
+                – HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m59s10ms761µs300ns).
+47100781 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool
+                – HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m37s533ms339µs300ns).
+47534674 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool
+                – HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m43s903ms247µs600ns).
+47722821 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool
+                – HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m8s165ms247µs400ns).
+48241975 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                – Closing JPA EntityManagerFactory for persistence unit 'default'
+48241997 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Shutdown initiated...
+48242061 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Shutdown completed.

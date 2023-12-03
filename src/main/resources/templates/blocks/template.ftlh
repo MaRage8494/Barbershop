@@ -15,7 +15,7 @@
     <body class="bg-light">
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a href="/">
+            <a href="/?size=2">
                 <span class="navbar-brand mb-0 h1" style="font-size: 30px">BarberShop</span>
             </a>
             <#if user.email??>

@@ -84,7 +84,7 @@
     </tr>
     </thead>
     <tbody>
-    <#list products as product>
+    <#list products.content as product>
         <tr style="vertical-align: middle;text-align: center;">
             <th>${product.title}</th>
             <th>${product.price}₽</th>
@@ -132,6 +132,7 @@
                 <option value="">Город не выбран</option>
 
                 <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
             </select>
         </div>
         <div class="form-group">
